@@ -29,16 +29,13 @@ module.exports.parse = ({ content, name, url }, { yaml, axios, notify }) => {
   };
   // 自定义 DIRECT / REJECT 条目
   [
-    'PROCESS-NAME,qbittorrent.exe,DIRECT',
     'PROCESS-NAME,NeteaseMusic.exe,DIRECT',
-    'DOMAIN,clash.razord.top,DIRECT',
     'DOMAIN,yacd.haishan.me,DIRECT',
     'DOMAIN-SUFFIX,msftncsi.com,DIRECT',
+    'DOMAIN-SUFFIX,bing.com,DIRECT',
     // 'DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT',
     // custom 可以删除，用于我的个人用途
     'PROCESS-NAME,ddns.exe,DIRECT',
-    'DOMAIN-SUFFIX,home.gyrojeff.moe,DIRECT',
-    'DOMAIN-SUFFIX,home.gyrojeff.top,DIRECT',
   ].forEach(rule => {
     content.rules.unshift(rule);
   });
@@ -62,16 +59,16 @@ module.exports.parse = ({ content, name, url }, { yaml, axios, notify }) => {
     'DOMAIN-SUFFIX,onenote.net,',
     'DOMAIN-SUFFIX,1drv.com,',
     'DOMAIN-SUFFIX,cdn.v2ex.com,',
-    'DOMAIN-SUFFIX,cdn.jsdelivr.net,',
+    'DOMAIN-SUFFIX,thingiverse.com,',
   ]
   
   // 需要对每个 Plan 配置相应的 GroupName
   var proxyGroupName = '';
   
-  if (name == '机场1') {
-    proxyGroupName = '组1';
-  } else if (name == '机场2') {
-    proxyGroupName = '组2';
+  if (name == 'ByWave.yaml') {
+    proxyGroupName = '🚀 节点选择';
+  } else if (name == 'Clash_1644681272.yaml') {
+    proxyGroupName = 'Proxy';
   } else if (name == '机场3') {
     proxyGroupName = '组3';
   }
